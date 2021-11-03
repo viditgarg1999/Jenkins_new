@@ -35,8 +35,7 @@ stages
 		echo "${BUILD_URL}/consoleText"
 
 		
-		env.WORKSPACE = pwd()
-		def version = readFile "${JENKINS_HOME}/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}/log"
+		
 		}
 	}
 }
