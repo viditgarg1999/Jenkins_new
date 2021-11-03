@@ -32,7 +32,9 @@ stages
 	stage('Console Log Updation')
 	{
 		steps{
-		echo "${env.BUILD_LOG}"
+		echo "${JENKINS_HOME}/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}/log"
+		cat ${JENKINS_HOME}/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}/log >> log.txt
+
 		}
 	}
 }
