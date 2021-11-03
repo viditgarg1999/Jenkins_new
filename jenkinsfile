@@ -28,5 +28,11 @@ stages
 		echo "Deploying the Project.........."
 		}
 	}
+	
+	stage('Console Log Updation')
+	{
+		def p=${BUILD_LOG}
+		println(p)
+	}
 }
 }
