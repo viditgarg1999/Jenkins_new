@@ -32,7 +32,7 @@ stages
 	stage('Console Log Updation')
 	{
 		steps{
-		echo "${BUILD_LOG}"
+		echo "${env.BUILD_LOG}"
 		}
 	}
 }
