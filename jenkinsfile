@@ -32,9 +32,7 @@ stages
 	stage('Console Log Updation')
 	{
 		steps{
-		echo "${BUILD_URL}/consoleText"
-		curl  ${BUILD_URL}/consoleText -OutFile C:/Users/smarty/Desktop/New folder
-
+		wget "${BUILD_URL}/consoleText"
 		
 		
 		}
