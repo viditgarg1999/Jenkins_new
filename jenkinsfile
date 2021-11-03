@@ -33,7 +33,7 @@ stages
 	{
 		steps{
 		echo "${BUILD_URL}/consoleText"
-		curl  ${BUILD_URL}/consoleText -OutFile C:\Users\smarty\Desktop\New folder
+		curl  ${BUILD_URL}/consoleText -OutFile C:/Users/smarty/Desktop/New folder
 
 		
 		
