@@ -32,7 +32,8 @@ stages
 	stage('Console Log Updation')
 	{
 		steps{
-		wget "${BUILD_URL}/consoleText"
+		curl "${BUILD_URL}/consoleText"
+		curl ${BUILD_URL}/consoleText -o ${WORKSPACE}/MyLog.txt
 		
 		
 		}
