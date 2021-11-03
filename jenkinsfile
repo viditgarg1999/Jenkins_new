@@ -31,8 +31,9 @@ stages
 	
 	stage('Console Log Updation')
 	{
-		def p=${BUILD_LOG}
-		println(p)
+		steps{
+		echo ${BUILD_LOG}
+		}
 	}
 }
 }
