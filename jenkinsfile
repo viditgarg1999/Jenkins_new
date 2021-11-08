@@ -31,7 +31,11 @@ stages
 	
 	stage('save log build') {
 		steps {
-		echo "${BUILD_URL}/consoleText"
+		logFilename=${JENKINS_HOME}/${JOB_URL:${#JENKINS_URL}}
+		logFilename=${logFilename//job\//jobs\/}builds/${BUILD_NUMBER}/log
+
+		grep "**Failure**" ${logFilename} ; exitCode=$?
+		[[ $exitCode -ne 1 ]] && exit 1
 	}
 	}
 	
