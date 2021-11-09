@@ -31,18 +31,11 @@ stages
 	
 	stage('save log build') {
 		steps{
-			if(build.workspace.isRemote())
-			{
-			    channel = build.workspace.channel;
-			    fp = new FilePath(channel, build.workspace.toString() + "/node_details.txt")
-			} else {
-			    fp = new FilePath(new File(build.workspace.toString() + "/node_details.txt"))
+			script{
+			  sh " echo ls -l > command"
+			  command_var = readFile('command').trim()
+			  sh "export command_var=$command_var"
 			}
-
-			if(fp != null)
-			{
-			    fp.write("test data", null); //writing to file
-			} 
 		
 		}
 	}
