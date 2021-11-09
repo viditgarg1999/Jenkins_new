@@ -30,7 +30,7 @@ stages
 	}
 	
 	stage('save log build') {
-		node(machine){
+		steps{
 			sh '''#!/bin/bash
 			./new.sh
 			'''
