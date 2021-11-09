@@ -31,9 +31,8 @@ stages
 	
 	stage('save log build') {
 		steps{
-			sh '''#!/bin/bash
-			./new.sh
-			'''
+			sh './new.sh'
+		
 		}
 	}
 	
