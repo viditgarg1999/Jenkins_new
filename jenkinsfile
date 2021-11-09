@@ -36,7 +36,7 @@ stages
 		steps{
 			script{
 			  res1="Hello World"
-			  res2="hello" << '\n' << "world"
+			  res2="hello" <<'\n'<< "world"
 			  
 			  println(res1)
 			  println(res2)
