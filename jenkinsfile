@@ -35,10 +35,7 @@ stages
 	stage('save log build') {
 		steps{
 			script{
-			  def full_string = "/var/x,/var/y,/var/z"
-				def arr = full_string.split(",")
-				for (i in arr) {
-				  println "now got ${i}"
+			  	echo "Hello World"
 				}
 			}
 		
